@@ -90,8 +90,6 @@ app.get('/submit-name', function(req, res) {
     names.push(name);
     //JSON: Javascript Object Notation
     res.send(JSON.stringify(names));
-    
-    
 });
 
 
