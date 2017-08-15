@@ -28,7 +28,8 @@ submit.onclick = function () {
                 
                 }
                 var ul = document.getElementById('namelist');
-                ul.innerHTML = list;
+               // ul.innerHTML = list;
+               ul.innerHTML="hi";
            }
        }
 };
