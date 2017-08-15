@@ -4,8 +4,15 @@ var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     //Make a request to the server and send the name
     //Create a request object
+   
    var request = new XMLHttpRequest();
    
+    //Make the request
+  
+   var nameInput = document.getElementById('name');
+   var name = nameInput.value;
+   request.open('GET', 'http://vinayachandranv.imad.hasura-app.io/submit-name?name=' + name, true);
+   request.send(null);
    
    //Capture the response and store it in a variable
    request.onreadystatechange = function () {
@@ -24,9 +31,5 @@ submit.onclick = function () {
            }
        }
 };
-   //Make the request
-   var nameInput = document.getElementById('name');
-   var name = nameInput.value;
-   request.open('GET', 'http://vinayachandranv.imad.hasura-app.io/submit-name?name=' + name, true);
-   request.send(null);
+  
 };
